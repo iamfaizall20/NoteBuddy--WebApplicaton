@@ -6,35 +6,113 @@
     font-family: 'Poppins';
 }
 body{
+    position: relative;
     min-height: 100svh;
     background: #301934;
 }
 /* ----- Navbar -----  */
 .navbar{
-    padding: 25px 45px;
+    padding: 20px 50px;
+    height: 80px;
 }
 .navbar h2{
-    font-size: 22px;
+    font-size: 22.5px;
     color: #e9e9e9;
 }
 
 .main{
     display: flex;
+    height: calc(100vh - 80px);
 }
 /* ----- Details Section ----- */
 .details-section{
     width: 35%;
-    background: #000;
-    height: 100vh;
 }
 .details-section h1{
     color: #e9e9e9;
-    margin: 20px 0px 20px 45px;
+    margin: 30px 0px 50px 50px;
     font-family: 'Oswald';
-    font-size: 52px;
-    line-height: 60px;
+    font-size: 55px;
+    line-height: 65px;
 }
+.details-section button{
+    margin-left: 50px;
+    border: none;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background: #CBA3E3;
+    font-weight: 550;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* ----- notes section ----- */
 .notes-section{
     width: 65%;
-    height: 100vh;
+}
+/* ----- Modals Design -----  */
+
+/* --- Add Modal ---  */
+.addNoteModal.show{
+    opacity: 1;
+    pointer-events: auto;
+    scale: 1;
+    transform: translate(-50%, -50%);
+}
+.addNoteModal{
+    opacity: 0;
+    scale: 0.9;
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-60%, -40%);
+    height: 450px;
+    width: 420px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+    color: #e9e9e9;
+    transition: all 0.15s ease;
+}
+.addNoteModal h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.addNoteModal label{
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+.addNoteModal .field{
+    background: none;
+    border: 1px solid #ccc;
+    outline: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 16.5px;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+    resize: none;
+    
+    &::placeholder{
+        color: #ccc;
+        opacity: 0.6;
+    }
+    &:focus{
+        border-color: #301934;
+    }
+}
+.addNoteModal button{
+    background: #CBA3E3;
+    font-weight: 550;
+    border: none;
+    outline: none;
+    font-size: 16.5px;
+    padding: 6px;
+    border-radius: 5px;
 }
