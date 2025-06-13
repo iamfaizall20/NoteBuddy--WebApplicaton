@@ -45,6 +45,17 @@ body{
     font-weight: 550;
     font-size: 18px;
     cursor: pointer;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.Add-Note-Btn span{
+    display: flex;
+    align-items: center;
+}
+.Add-Note-Btn span i{
+    font-size: 23px;
 }
 /* ----- notes section ----- */
 .notes-section{
@@ -82,6 +93,20 @@ body{
 .addNoteModal h3{
     font-size: 20px;
     margin-bottom: 20px;
+}
+.addNoteModal i{
+    position: absolute;
+    right: 25px;
+    top: 17px;
+    font-size: 28px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 25px;
+
+    &:hover{
+        background: #c00f21;
+        /* color: black; */
+    }
 }
 .addNoteModal label{
     margin-bottom: 6px;
