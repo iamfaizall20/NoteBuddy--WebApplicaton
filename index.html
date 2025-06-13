@@ -24,18 +24,14 @@
 
         <!-- Notes Section -->
         <div class="notes-section">
-            <div class="note">
+            <!-- <div class="note">
                 <div class="title">
-                    <h2>Startup Ideas</h2>
+                    <h2 class="Note-Title">Startup Ideas</h2>
                 </div>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, hic?</p>
+                    <p class="Note-Description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, hic?</p>
                 </div>
-            </div>
-            <div class="note"></div>
-            <div class="note"></div>
-            <div class="note"></div>
-            <div class="note"></div>
+            </div> -->
         </div>
 
         <!-- Modals -->
@@ -44,14 +40,14 @@
         <div class="overlay"></div>
         <div class="addNoteModal">
             <h3>Add Note Details</h3>
-            <i class="ri-close-line"></i>
+            <i onclick="closeNoteModal()" class="ri-close-line"></i>
             <label for="title">Title</label>
-            <input type="text" id="title" class="field" placeholder="e.g. Startup Ideas to Explore">
+            <input type="text" id="title-field" class="field" placeholder="e.g. Startup Ideas to Explore">
 
             <label for="description">Description</label>
-            <textarea id="description" class="field" placeholder="A curated collection of innovative...." cols="30"
-                rows="10"></textarea>
-            <button>Save Note</button>
+            <textarea id="description-field" class="field" placeholder="A curated collection of innovative...."
+                cols="30" rows="10"></textarea>
+            <button class="saveNoteBtn">Save Note</button>
         </div>
     </div>
     <script src="script.js"></script>
