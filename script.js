@@ -31,8 +31,8 @@ saveNoteBtn.addEventListener('click', function () {
     const NoteTitle = document.createElement('h2')
     const NoteDescription = document.createElement('p')
 
-    NoteDescription.textContent = Description;
-    NoteTitle.textContent = Title;
+    NoteDescription.innerHTML = Description;
+    NoteTitle.innerHTML = Title;
 
     NoteDiv.appendChild(NoteTitle)
     NoteDiv.appendChild(NoteDescription)

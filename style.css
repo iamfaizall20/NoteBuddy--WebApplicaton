@@ -159,13 +159,12 @@ body{
 }
 .note{
     height: 180px;
-    width: 350px;
+    width: 320px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     padding: 10px 15px;
     overflow: hidden;
     border-radius: 10px;
-    word-wrap: break-word;
 }
 .note h2{
     font-size: 20px;
@@ -173,4 +172,8 @@ body{
 }
 .note p{
     font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
