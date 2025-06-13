@@ -113,13 +113,12 @@ body{
     right: 25px;
     top: 17px;
     font-size: 28px;
-    transition: all 0.2s ease-in-out;
     cursor: pointer;
     border-radius: 25px;
+    transition: all 0.2s ease-in-out;
 
     &:hover{
         background: #c00f21;
-        /* color: black; */
     }
 }
 .addNoteModal label{
@@ -142,9 +141,6 @@ body{
         color: #ccc;
         opacity: 0.6;
     }
-    &:focus{
-        border-color: #301934;
-    }
 }
 .addNoteModal button{
     background: #CBA3E3;
@@ -154,4 +150,5 @@ body{
     font-size: 16.5px;
     padding: 6px;
     border-radius: 5px;
+    cursor: pointer;
 }
