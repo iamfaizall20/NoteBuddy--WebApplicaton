@@ -30,16 +30,19 @@ saveNoteBtn.addEventListener('click', function () {
 
     const NoteTitle = document.createElement('h2')
     const NoteDescription = document.createElement('p')
+    const NoteOptions = document.createElement('i')
 
+    NoteOptions.className = 'ri-more-2-line'
     NoteDescription.innerHTML = Description;
     NoteTitle.innerHTML = Title;
 
     NoteDiv.appendChild(NoteTitle)
     NoteDiv.appendChild(NoteDescription)
+    NoteDiv.appendChild(NoteOptions)
     document.querySelector('.notes-section').appendChild(NoteDiv);
 
-    Title.value = '';
-    Description.value = '';
+    document.getElementById('title-field').value = '';
+    document.getElementById('description-field').value = '';
 
     closeNoteModal();
 })
