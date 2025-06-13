@@ -109,10 +109,11 @@ body{
 .addNoteModal i{
     position: absolute;
     right: 25px;
-    top: 17px;
+    top: 14px;
     font-size: 28px;
     cursor: pointer;
     border-radius: 25px;
+    padding: 3px;
     transition: all 0.2s ease-in-out;
 
     &:hover{
