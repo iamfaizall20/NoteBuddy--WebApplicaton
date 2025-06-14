@@ -6,8 +6,8 @@
 
 ## 🚀 Features
 
-**Add Notes** 
-**Delete Notes** 
+Add Notes
+Delete Notes
 
 ---
 
