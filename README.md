@@ -6,10 +6,8 @@
 
 ## 🚀 Features
 
-* 📝 **Add Notes** – Quickly jot down and save important ideas or reminders.
-* 🔍 **Search Notes** – Instantly find notes using a real-time search feature.
-* 📌 **Pin Notes** – Pin important notes to keep them at the top and easily accessible.
-* 💾 **Local Storage** – Your notes are saved in the browser’s local storage for persistence.
+Add Notes
+Delete Notes
 
 ---
 
