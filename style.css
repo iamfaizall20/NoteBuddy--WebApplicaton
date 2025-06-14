@@ -291,8 +291,8 @@ body{
         bottom: 0;
         height: 55svh;
         padding: 20px;
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
+        display: flex;
+        flex-direction: column;
     }
     .note{
         width: 100%;
