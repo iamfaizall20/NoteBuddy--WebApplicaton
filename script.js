@@ -2,59 +2,72 @@
 const addNoteBtn = document.querySelector('.Add-Note-Btn');
 const addNoteModal = document.querySelector('.addNoteModal');
 const closeNoteBtn = document.querySelector('.addNoteModal i');
-const overlay = document.querySelector('.overlay')
-const saveNoteBtn = document.querySelector('.saveNoteBtn')
+const overlay = document.querySelector('.overlay');
+const saveNoteBtn = document.querySelector('.saveNoteBtn');
+const viewNoteModal = document.querySelector('.viewNoteModal'); // ✅ Moved outside
 
 // Add Note Popup Modal 
 addNoteBtn.addEventListener('click', function () {
     addNoteModal.classList.add('show');
-    overlay.classList.add('show')
-})
-//Close Popup Modal
+    overlay.classList.add('show');
+});
+
+// Close Popup Modal
 function closeNoteModal() {
-    addNoteModal.classList.remove('show')
-    overlay.classList.remove('show')
+    addNoteModal.classList.remove('show');
+    overlay.classList.remove('show');
 }
 
-//Event to Save Note
+// Event to Save Note
 saveNoteBtn.addEventListener('click', function () {
-    const Title = document.getElementById('title-field').value
-    const Description = document.getElementById('description-field').value
+    const Title = document.getElementById('title-field').value.trim();
+    const Description = document.getElementById('description-field').value.trim();
 
-    //Edge Case alert if Fields are Empty
     if (Title === "" || Description === "") {
-        alert("Fill Field")
+        alert("Fill Field");
         return;
     }
 
-    const NoteDiv = document.createElement('div') //Create a Div with 'note' class name
-    NoteDiv.classList.add('note')
+    const NoteDiv = document.createElement('div');
+    NoteDiv.classList.add('note');
 
-    //Creates Tags Elements in Note Class div
-    const NoteTitle = document.createElement('h2')
-    const NoteDescription = document.createElement('p')
-    const DeleteOption = document.createElement('i')
+    const NoteTitle = document.createElement('h2');
+    const NoteDescription = document.createElement('p');
+    const DeleteOption = document.createElement('i');
 
-    DeleteOption.className = 'ri-delete-bin-7-line' //Delete icon
+    DeleteOption.className = 'ri-delete-bin-7-line';
 
-    //Filling Input Data into Notes 
-    NoteDescription.innerHTML = Description;
-    NoteTitle.innerHTML = Title;
+    NoteTitle.innerText = Title;
+    NoteDescription.innerText = Description;
 
-    //Adding Childs to the Parent, NoteDiv is a 'note' class 
-    NoteDiv.appendChild(NoteTitle)
-    NoteDiv.appendChild(NoteDescription)
-    NoteDiv.appendChild(DeleteOption)
+    NoteDiv.appendChild(NoteTitle);
+    NoteDiv.appendChild(NoteDescription);
+    NoteDiv.appendChild(DeleteOption);
     document.querySelector('.notes-section').appendChild(NoteDiv);
 
-    //Clearing input fields
     document.getElementById('title-field').value = '';
     document.getElementById('description-field').value = '';
-
-    //calling function to close the popup
     closeNoteModal();
 
-    DeleteOption.addEventListener('click', function () {
+    // Delete note
+    DeleteOption.addEventListener('click', function (e) {
+        e.stopPropagation();
         NoteDiv.remove();
-    })
-})
+    });
+
+    // View note
+    NoteDiv.addEventListener('click', function () {
+        document.querySelector('.viewNoteModal .modal-Title').innerText = NoteTitle.innerText;
+        document.querySelector('.viewNoteModal .modal-Description').innerText = NoteDescription.innerText;
+
+        overlay.classList.add('show');
+        viewNoteModal.classList.add('show');
+    });
+});
+
+// Close any modal on overlay click
+overlay.addEventListener('click', function () {
+    addNoteModal.classList.remove('show');
+    viewNoteModal.classList.remove('show');
+    overlay.classList.remove('show');
+});

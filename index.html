@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NoteBuddy | your notes companion</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Assets/web-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Assets/tab-icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -33,7 +33,7 @@
         <!-- Add note Modal  -->
         <div class="overlay"></div>
 
-        <div class="addNoteModal">
+        <div class="addNoteModal modal">
             <h3>Add Note Details</h3>
             <i onclick="closeNoteModal()" class="ri-close-line"></i>
             <label for="title">Title</label>
@@ -43,6 +43,11 @@
             <textarea id="description-field" class="field" placeholder="A curated collection of innovative...."
                 cols="30" rows="10"></textarea>
             <button class="saveNoteBtn">Save Note</button>
+        </div>
+
+        <div class="viewNoteModal">
+            <h2 class="modal-Title"></h2>
+            <p class="modal-Description"></p>
         </div>
     </div>
     <script src="script.js"></script>
