@@ -186,8 +186,17 @@ body{
 }
 .note i{
     font-size: 20px;
-    font-weight: 600;
     position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 16px;
+    right: 15px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+    
+    &:hover{
+        background: #c00f21;
+        
+    }
 }

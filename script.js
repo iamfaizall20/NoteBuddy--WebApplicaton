@@ -35,7 +35,7 @@ saveNoteBtn.addEventListener('click', function () {
     const NoteDescription = document.createElement('p')
     const NoteOptions = document.createElement('i')
 
-    NoteOptions.className = 'ri-more-2-line' //Options icon
+    NoteOptions.className = 'ri-delete-bin-7-line' //Delete icon
 
     //Filling Input Data into Notes 
     NoteDescription.innerHTML = Description;
