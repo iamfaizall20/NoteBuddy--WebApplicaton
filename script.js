@@ -33,9 +33,9 @@ saveNoteBtn.addEventListener('click', function () {
     //Creates Tags Elements in Note Class div
     const NoteTitle = document.createElement('h2')
     const NoteDescription = document.createElement('p')
-    const NoteOptions = document.createElement('i')
+    const DeleteOption = document.createElement('i')
 
-    NoteOptions.className = 'ri-delete-bin-7-line' //Delete icon
+    DeleteOption.className = 'ri-delete-bin-7-line' //Delete icon
 
     //Filling Input Data into Notes 
     NoteDescription.innerHTML = Description;
@@ -44,7 +44,7 @@ saveNoteBtn.addEventListener('click', function () {
     //Adding Childs to the Parent, NoteDiv is a 'note' class 
     NoteDiv.appendChild(NoteTitle)
     NoteDiv.appendChild(NoteDescription)
-    NoteDiv.appendChild(NoteOptions)
+    NoteDiv.appendChild(DeleteOption)
     document.querySelector('.notes-section').appendChild(NoteDiv);
 
     //Clearing input fields
@@ -53,4 +53,8 @@ saveNoteBtn.addEventListener('click', function () {
 
     //calling function to close the popup
     closeNoteModal();
+
+    DeleteOption.addEventListener('click', function () {
+        NoteDiv.remove();
+    })
 })
