@@ -43,7 +43,7 @@ saveNoteBtn.addEventListener('click', function () {
     NoteDiv.appendChild(NoteTitle);
     NoteDiv.appendChild(NoteDescription);
     NoteDiv.appendChild(DeleteOption);
-    document.querySelector('.notes-section').appendChild(NoteDiv);
+    document.querySelector('.notes-section').prepend(NoteDiv);
 
     document.getElementById('title-field').value = '';
     document.getElementById('description-field').value = '';
